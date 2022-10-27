@@ -1,0 +1,35 @@
+print('MATERIAIS DE DESENHO')
+print('-' * 10)
+print('Nosso produtos:')
+prod1 = str('Lapis').strip().lower().upper()
+prod2 = str('Borracha').strip().lower().upper()
+preço1 = float('4.50')
+preço2 = float('2.50')
+print(prod1,'\n',prod2)
+
+pergunta1 = str(input('Quer ver os nosso preços? \n [sim/não]: '))
+if pergunta1 == 'sim':
+  print('{}:R$ {} \n {}:R$ {}'.format(prod1, preço1, prod2, preço2))
+else:
+  print('Obrigado pela atenção')
+  
+pergunta2 = str(input('Você quer adiquirir nossos produtos? \n [sim/não]: '))
+if pergunta2 == 'sim':
+  pergunta3 = str(input('O que você quer comprar?')).strip().lower().upper()
+  #if pergunta3 == str( prod1 and prod2):
+    # quantidade = int(input('Digite a quantidade:'))
+    #total = (preço1 + preço2) * quantidade
+    print('Você irá pagar: R${}'.format(total))
+  if pergunta3 == prod1:
+    quantidade = int(input('Digite a quantidade:'))
+    total = quantidade * preço1
+    print('Você irá pagar: R${}'.format(total))
+  if pergunta3 == prod2:
+    quantidade = int(input('Digite a quantidade:'))
+    total = quantidade * preço2
+    print('Você irá pagar: R${}'.format(total))
+else:
+    print('Não estou reconhecendo')
+
+print('*' * 5)
+print('Obrigado pela atenção!')

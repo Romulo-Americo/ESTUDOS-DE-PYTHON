@@ -1,0 +1,11 @@
+print('SALÁRIO COM AUMENTO')
+salario_base = float(input('Seu sálario:R$ '))
+comissão = float(input('Total de vendas:R$ '))
+if comissão == 1500.00:
+    salário_total = (1500.00 * 3) / 100
+    print('Você irá receber {}'.format(salário_total + salario_base))
+
+else:
+    salário_total = (comissão * 5) / 100
+    print('Você irá receber {}'.format(salário_total + salario_base))
+    

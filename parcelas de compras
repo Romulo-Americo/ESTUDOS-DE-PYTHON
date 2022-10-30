@@ -1,0 +1,22 @@
+valor = float(input('Digite o preço do produto:R$ '))
+tipo_de_pagamento = float(input('''Forma de pagamento
+[ 1 ] À vista/ cheque
+[ 2 ]À vista no cartão
+[ 3 ] 2x no cartão
+[ 4 ] 3x ou mais no cartão
+Escolha sua forma de pagamento:'''))
+if tipo_de_pagamento == 1:
+    pagamento = valor - ((valor * 10) / 100)
+    print('Seu desconto é de 10%, pague: R${: 2f}'.format(pagamento))
+elif tipo_de_pagamento == 2:
+    pagamento = valor - ((valor * 5) / 100)
+    print('Seu desconto é de 5%,  pague :R${:.2f}'.format(pagamento))
+elif tipo_de_pagamento == 3:
+    pagamento = valor / 2
+    print('Sua parcela sem desconto é:R${:.2f}'.format(pagamento))
+elif tipo_de_pagamento == 4:
+    parcela = int(input('Parcelar de quantas vezes?'))
+    pagamento = ((valor * 20) / 100) + valor
+    valor_parcela = pagamento / parcela
+    print('O valor da sua com 20% de juros é:R${}'.format(pagamento))
+    print('Em {}x suas parcelas ficam de:R${:.2f}'.format(parcela, valor_parcela))

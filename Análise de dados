@@ -1,0 +1,15 @@
+print('Leitor de Peso')
+maior = 0
+menor = 0
+for p in range(1, 6):
+    total_peso = float(input('Digite o peso da {}° pessoa: '.format(p)))
+    if p == 1:
+        maior = total_peso
+        menor = total_peso
+    else:
+        if total_peso > maior:
+            maior = total_peso
+        if total_peso < menor:
+            menor = total_peso
+print('O maior é {} '.format(maior))
+print('O menor é {}'.format(menor))

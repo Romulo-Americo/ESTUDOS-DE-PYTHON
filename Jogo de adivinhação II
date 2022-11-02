@@ -1,0 +1,18 @@
+from random import randint
+print('JOGO DE ADIVINHAÇÃO')
+computador = randint(0, 10)
+print('Tente adinvinhar o número que eu pensei: ')
+acertou = False
+tentativas = 0
+while not acertou:
+    jogador = int(input('Digite sua jogada entre 0 e 10: '))
+    if jogador == computador:
+        acertou = True
+    else:
+        if computador > jogador:
+            print('mais')
+        elif computador < jogador:
+            print('menos')
+    tentativas +=1
+print('Acertou')
+print('Você tentou {} vezes'.format(tentativas))

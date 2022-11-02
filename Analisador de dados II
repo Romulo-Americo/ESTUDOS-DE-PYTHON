@@ -1,0 +1,26 @@
+print('Analisador de Dados')
+soma = 0
+media = 0
+maior_idade = 0
+nome_velho = ''
+totmulher20 = 0
+for pessoa in  range(1, 5):
+    print('DADOS DO {}° USUÁRIO'.format(pessoa))
+    nome = (input('NOME: '))
+    idade = int(input('IDADE: '))
+    sexo = (input('SEXO[M/F]: '))
+    print('-*-' * 15)
+    soma += idade
+
+    if pessoa == 1 and sexo in 'Mm':
+        maior_idade = idade
+        nome_velho = nome
+    if sexo in 'Mm'and idade > maior_idade:
+        maior_idade = idade
+        nome_velho = nome
+    if sexo in 'Ff' and idade > 20:
+        totmulher20 += 1
+media = soma / 4
+print('A media de idade do grupo é: {} anos'.format(media))
+print('O homem mais velho do grupo tem {} e se chama {}'.format(maior_idade, nome_velho))
+print('Ao todo são {} mulheres com menos de 20 anos'.format(totmulher20))

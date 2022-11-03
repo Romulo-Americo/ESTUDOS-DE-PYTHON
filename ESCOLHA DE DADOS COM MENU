@@ -1,0 +1,27 @@
+valor1 = int(input('Digite um valor:'))
+valor2 = int(input('Digite outro valor: '))
+opção = 0
+while opção != 5:
+  print('''ESCOLHA UMA OPÇÃO
+  [ 1 ] SOMAR
+  [ 2 ] MULTIPLICAR
+  [ 3 ] MAIOR 
+  [ 4 ] NOVOS NÚMEROS
+  [ 5 ] SAIR DO PROGRAMA''')
+  opção = int(input('Digite sua opção: '))
+  if opção == 1:
+    resultado = valor1 + valor2 
+    print('{} + {} = {}'.format(valor1, valor2, resultado))
+  elif opção ==2: 
+    resultado2 = valor1 * valor2
+    print('{} x {} = {}'.format(valor1, valor2, resultado2))
+  elif opção == 3:
+    if valor1 > valor2:
+      maior = valor1
+    else:
+      maior = valor2
+    print('O maior valor é {}'.format(maior)
+  elif opção == 4:
+    valor1 = int(input('Digite o seu novo valor: '))
+    valor2 = int(input('Digite o outro valor:')
+print('ACABOU')

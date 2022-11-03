@@ -4,22 +4,22 @@ media = 0
 maior_idade = 0
 nome_velho = ''
 totmulher20 = 0
-for pessoa in  range(1, 5):
+for pessoa in  range(1, 5): #dentro do esquema de repetição as variáveis vão receber as respostas equivalente a contagegem pedida
     print('DADOS DO {}° USUÁRIO'.format(pessoa))
-    nome = (input('NOME: '))
-    idade = int(input('IDADE: '))
-    sexo = (input('SEXO[M/F]: '))
-    print('-*-' * 15)
-    soma += idade
+    nome = (input('NOME: '))#repe 4 vezes
+    idade = int(input('IDADE: '))#repe 4 vezes
+    sexo = (input('SEXO[M/F]: '))#repe 4 vezes
+    print('-*-' * 15)#repe 4 vezes
+    soma += idade#repe 4 vezes //a soma vai receber a idade somando com a variável soma que é igual 0  
 
-    if pessoa == 1 and sexo in 'Mm':
-        maior_idade = idade
-        nome_velho = nome
-    if sexo in 'Mm'and idade > maior_idade:
-        maior_idade = idade
-        nome_velho = nome
+    if pessoa == 1 and sexo in 'Mm':#se a primeira pessoa for igual a a 1 da repetção e em masculino
+        maior_idade = idade#maior_idade vai receber idade
+        nome_velho = nome#e nome_velho vai receber nome
+    if sexo in 'Mm'and idade > maior_idade:#se sexo em masculino e idade for maior que maior idade
+        maior_idade = idade#maior idade vai receber idade (que é a maior das repetições)
+        nome_velho = nome#nome_velho vai receber nome que é o nome do mais velho
     if sexo in 'Ff' and idade > 20:
-        totmulher20 += 1
+        totmulher20 += 1#soma das variáveis que são do sexo feminino
 media = soma / 4
 print('A media de idade do grupo é: {} anos'.format(media))
 print('O homem mais velho do grupo tem {} e se chama {}'.format(maior_idade, nome_velho))

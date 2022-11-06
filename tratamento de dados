@@ -1,0 +1,19 @@
+c = str('Ss')
+contador = maior = menor = soma = 0
+while c in 'Ss':
+    numero = int(input('Digite um numero: '))
+    contador += 1
+    soma += numero
+    if contador == 1:
+        maior = menor = numero
+    else:
+        if numero > maior:
+          maior = numero
+        if numero < menor:
+            menor = numero
+    media = soma / contador
+    c = (input('Quer continuar?[S/N]')).upper().strip()
+
+print('Você digitou {} numeros'.format(contador))
+print('A media dos valores adcionado é:{}'.format(media))
+print('O maior é {} e o menor é {}'.format(maior, menor))

@@ -1,0 +1,11 @@
+print('Tabuada')
+numero = 0
+cont = 1
+while True:
+    numero = int(input('Digite um numero para ver sua tabauda [-1 para parar]: '))
+    if numero < 0:
+        break
+    for cont in range(1, 11):
+        cont
+        valor = cont * numero
+        print(f'{cont} x {numero} = {valor}')

@@ -1,0 +1,27 @@
+print('CADASTRO DE DADOS')
+cont_idade = 0
+cont_M = 0
+cont_idadeF = 0
+while True:
+  nome = input('Nome: ').strip()
+  sexo = ' '
+  while sexo not in 'MF':
+    sexo = input('Sexo[M/F]: ').strip().upper()
+  idade = int(input('Idade: '))
+  cadastro = ' '
+  while cadastro not in 'SN':
+    cadastro = input('Cadastrar mais? [S/N]').strip().upper()
+  if cadastro == 'N':
+    break
+  if idade >= 18:
+    cont_idade += 1
+  if sexo == 'M':
+    cont_M += 1
+  if sexo == 'F' and idade < 20:
+    cont_idadeF += 1 
+print(f'O total de pessoas com maior de 18 anos: {cont_idade}')
+print(f'O total de homens cadastrados: {cont_M}')
+print(f'O total de mulheres com menos de 20 anos: {cont_idadeF}')
+ #analisar 
+      
+  

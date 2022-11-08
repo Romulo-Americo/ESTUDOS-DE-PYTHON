@@ -1,0 +1,29 @@
+print('{:-^40}'.format('Leitor de produtos'))
+tot = 0
+cont = 0
+menorpreço = 0
+cotadormenor = 0
+
+while True:
+  produto = input('Produto: ')
+  preço = float(input('Preço: '))
+  cont += 1
+  tot += preço
+  continua = ' '
+  while continua not in 'SN':
+    continua = input('Quer adicionar mais produtos?[S/N]').strip().upper() [0]
+  if cont == 1:
+    menorpreço = preço
+  else:
+    if preço < menorpreço:
+      menor = preço
+  if preço >= 1500:
+    cont +=1
+  
+  if continua == 'N':
+    break 
+    
+print(f'Total de gastos foi de: R$ {tot:.2f}') 
+print(f'Total de produtos acima de R$ 1500: {cont} produtos')
+print(f'O produto com menor preço é de R$ {menorpreço:.2f}')
+print('{:-^40}'.format('FIM DO PROGRAMA'))

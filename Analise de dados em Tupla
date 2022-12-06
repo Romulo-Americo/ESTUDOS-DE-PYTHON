@@ -1,0 +1,13 @@
+valor = int(input('Digite o valor: ')), int(input('Digite o valor: ')), int(input('Digite o valor: ')), int(input('Digite o valor: ')), int(input('Digite o valor: '))
+print(f'Os valores que você digitou: {valor}')
+if valor == 9:
+  print(f'O valor 9 apareceu:{valor.count(9)} vezes')
+else:
+  print('Você não digitou nenhum valor 9')
+if 3 in valor:
+  print(f'A posição do valor 3: {valor.index(3) + 1}')
+else:
+  print('Não há valor 3 para encontra a posição')
+for n in valor:
+  if n % 2 == 0:
+    print(f'Valores pares digitados são: {n}')

@@ -1,0 +1,17 @@
+num = [2, 5, 0, 1]
+print(num)
+num[2] = 3#trocando valor em uma lista
+print(num) 
+num.append(5)#adicionando valor em uma lista
+print(num)
+num.sort()#organizando em ordem crescente
+print(num)
+num.sort(reverse=True)#ondernado de forma decrescente
+print(num)
+print(len(num))#Quantidade de valores
+num.insert(1, 20)#inseri um novo valor na lista 
+print(num)
+num.pop(2)#remove o valor da lista na posição determinada
+print(num)
+num.remove(20)#remove o valor da lista
+print(num)

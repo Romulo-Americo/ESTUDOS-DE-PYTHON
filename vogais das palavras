@@ -1,0 +1,7 @@
+palavras = ('Carro','sapato', 'janela', 'roupa',
+           'sandalia', 'videos', 'anel', 'caderno', 'fruta')
+for vogais in palavras:
+  print(f'\nAs vogais da palavra {vogais} são: ', end='')
+  for letra in vogais:
+    if letra.lower() in 'aeiou':
+      print(letra, end='')

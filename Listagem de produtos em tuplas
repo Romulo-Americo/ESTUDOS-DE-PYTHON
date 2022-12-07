@@ -1,0 +1,9 @@
+listagem = ('Lapis', 2.50,
+            'Borracha', 3.50,
+            'Caderno', 15.50,
+            'Caneta', 2.50)
+for pos in range(0, len(listagem)):
+    if pos % 2 == 0:
+        print(f'{listagem[pos] :.<30}',end='')
+    else:
+        print(f'{listagem[pos] :>7.2f}')

@@ -1,0 +1,24 @@
+listanum = []
+
+for contador in range(0,5):
+    listanum.append(int(input(f'Digite um valor na posição {contador}: ')))
+    if contador == 0:
+        maior = menor = listanum[contador]
+    else:
+        if listanum[contador] > maior:
+            maior = listanum[contador]
+        if listanum[contador] < menor:
+            menor = listanum[contador]
+print(listanum)
+
+print(f'O maior valor foi {maior} e está na(s) posição(ões): ', end='')
+for quantidade, valor in enumerate(listanum):
+    if valor == maior:
+        print(f'{quantidade} ', end='')
+print()
+
+print(f'O menor valor foi {menor} e está na(s) posição(ões): ',end='')
+for quantidade2, valor2 in enumerate(listanum):
+    if valor2 == menor:
+        print(f'{quantidade2} ', end='')
+

@@ -1,0 +1,28 @@
+dados = []
+dados_finais = []
+maior = menor = 0
+while True:
+  dados.append(input('Nome: '))
+  dados.append(float(input('Peso: ')))
+  if len(dados_finais) == 0:
+    maior = menor = dados[1]
+  else:
+    if dados[1] > maior:
+      maior = dados[1]
+    if dados[1] < menor:
+      menor = dados[1]
+  dados_finais.append(dados[:])
+  dados.clear()
+  opção = input('Quer adicionar mais? \n[S/N]: ').upper()
+  if opção == 'N':
+    break
+  
+print(f'Você cadastrou {len(dados_finais)} pessoas ')
+print(f'O maior peso foi: {maior} KG ')
+for pessoa in dados_finais:
+  if pessoa[1] == maior:
+    print(f'{pessoa[0]}')
+print(f'O menor peso foi: {menor} KG')
+for pessoa in dados_finais:
+  if pessoa[1] == menor:
+    print(f'{pessoa[0]}')

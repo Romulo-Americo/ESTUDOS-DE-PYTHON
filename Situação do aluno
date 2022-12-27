@@ -1,0 +1,15 @@
+dados_dos_alunos = {}
+
+dados_dos_alunos ['nome'] = input('NOME:\n')
+dados_dos_alunos ['media'] = float(input(f'Média do aluno {dados_dos_alunos["nome"]}:\n'))
+
+if dados_dos_alunos['media'] >= 7:
+  dados_dos_alunos['situação'] = 'Aprovado'
+elif 5<= dados_dos_alunos['media'] < 7:
+  dados_dos_alunos['situação'] = 'Recuperação'
+else:
+  dados_dos_alunos['situação'] = 'Reprovado'
+
+print()
+for chave, valor in dados_dos_alunos.items():
+  print(f'{chave} = {valor}')

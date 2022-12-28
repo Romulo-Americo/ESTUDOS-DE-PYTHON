@@ -1,0 +1,29 @@
+pessoa = {}
+galera = []
+soma = media = 0
+while True:
+  pessoa.clear()
+  pessoa['nome'] = input('Nome: ')
+  while True:
+    pessoa['sexo'] = input('Sexo:[M/F] ').upper()[0]
+    if pessoa['sexo'] in 'FM':
+      break
+    print('ERRO DIGITE APENAS M OU F')
+  pessoa['idade'] = int(input('Idade: '))
+  soma += pessoa['idade']
+  galera.append(pessoa.copy())
+  while True:
+    opção = input('Quer adicionar mais?\n[S/N]').upper()
+    if opção in 'SN':
+      break
+    print('ERRO DIGITE APENAS S OU N')
+  if opção == 'N':
+    break
+print(f'foram cadastrados {len(galera)} pessoas')
+media = soma / len(galera)
+print(f'Média de idade é de {media:5.2f} anos.')
+print('As mulheres cadastradas foram: ', end='')
+for p in galera:
+  if p['sexo'] in 'F':
+    print(p['nome'], end=' ')
+print()

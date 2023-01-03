@@ -1,0 +1,11 @@
+def area(base, altura):
+  medida = base * altura
+  print(f'A medida quadrada da sua área é {medida}')
+
+largura = float(input('Largura (m): '))
+comprimento = float(input('Comprimento (m): '))
+area(largura, comprimento)
+
+
+
+

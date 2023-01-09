@@ -1,0 +1,13 @@
+def ficha (jogador= '<DESCONHECIDO>', gols= 0):
+  print(f'Jogador {jogador} fez {gols} gol(s).')
+
+pessoa = input('Informe o nome do jogador: ')
+quantidade = input('Informe a quantidade de gols: ')
+if quantidade.isnumeric():
+  quantidade = int(quantidade)
+else:
+  quantidade = 0
+if pessoa.strip() == '':
+  ficha(gols= quantidade)
+else:
+  ficha(pessoa, quantidade)

@@ -1,0 +1,14 @@
+def aumento(dinheiro=0, taxa=0):
+  return dinheiro + (dinheiro * taxa/100)
+
+def redução(dinheiro=0, taxa=0):
+  return dinheiro - (dinheiro * taxa/100)
+
+def dobro(dinheiro=0):
+  return dinheiro * 2
+
+def metade(dinheiro=0):
+  return dinheiro /  2
+
+def moeda(dinheiro=0, real= 'R$'):
+  return f'{real}{dinheiro:.2f}'.replace('.', ',')

@@ -1,0 +1,92 @@
+import turtle 
+def informacao_extra(func):
+    print('[1]Triangulo \n[2]Trapezio \n[3]Retangulo \n[4]Quadrado')
+    def dados():
+        func()
+    opcao_de_formato = int(input('Informe a forma da área para ser mostrada: '))
+    if opcao_de_formato == 1:
+      tela = turtle.Screen()
+      tela.title("Triangulo")
+      tela.setup(350, 200)
+      t = turtle.Turtle()
+      t.penup()
+      t.goto(-100, -50)
+      t.pendown()
+      t.forward(200)
+      t.left(120)
+      t.forward(200)
+      t.left(120)
+      t.forward(200)
+      t.hideturtle()
+      turtle.done()
+      tela.mainloop()
+
+    if opcao_de_formato == 2:
+      tela = turtle.Screen()
+      tela.title('Trapezio')
+      trapezio = turtle.Turtle()
+      trapezio.forward(100)
+      trapezio.right(60)
+      trapezio.forward(50)
+      trapezio.right(120)
+      trapezio.forward(100)
+      trapezio.right(60)
+      trapezio.forward(50)
+
+
+
+    if opcao_de_formato == 3:
+      tela = turtle.Screen()
+      tela.title("Retangulo")
+      retangulo = turtle.Turtle()
+      retangulo.forward(100)
+      retangulo.right(90)
+      retangulo.forward(50)
+      retangulo.right(90)
+      retangulo.forward(100)
+      retangulo.right(90)
+      retangulo.forward(50)
+      retangulo.right(90)
+  
+    if opcao_de_formato == 4:
+      tela = turtle.Screen()
+      tela.title("Quadrado")
+      quadrado = turtle.Turtle()
+      s = 40
+      quadrado.forward(s)
+      quadrado.left(90)
+      quadrado.forward(s)
+      quadrado.left(90)
+      quadrado.forward(s)
+      quadrado.left(90)
+      quadrado.forward(s)
+      quadrado.left(90)
+    return dados
+
+@informacao_extra
+def area():
+  base = int(input('Informe a base:'))
+  altura = float(input('Informe a altura:'))
+  print('[1]Triangulo \n[2]Trapezio \n[3]Retangulo \n[4]Quadrado')
+  opcao_de_formato = int(input('Informe o foramto da área: '))
+
+  
+  if opcao_de_formato == 1:
+    medida = (base * altura)/ 2
+    print(f'A sua area contem: {medida} quadrada')
+    
+  if opcao_de_formato == 2:
+    base_menor = int(input('Informe a base menor: '))
+    soma_base = base_menor + base
+    medida = (soma_base * altura) / 2
+    print(f'A sua area contem: {medida} quadrada')
+    
+  if opcao_de_formato == 3:
+    medida = base * altura
+    print(f'A sua area contem: {medida} quadrada')
+    
+  if opcao_de_formato == 4:
+    medida = base * altura
+    print(f'A sua area contem: {medida} quadrada')
+
+area()

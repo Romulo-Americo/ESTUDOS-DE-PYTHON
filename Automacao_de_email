@@ -1,0 +1,22 @@
+import smtplib
+import email.message
+
+def enviar_email():
+    corpo_email = '''
+    <p> Olá mundo </p>
+    <p> Teste de automação de email</p>
+    '''
+
+msg = email.message.Message()
+msg ['Subject'] = 'Assunto'
+msg ['From'] = 'romuloamericofurtadosilva@gmail.com'
+msg ['To'] = 'dsb.snf21@uea.edu.br'
+passord = 
+msg.add_header('Contet-Type', 'text/html')
+msg.set_payload('')
+s = smtplib.SMTP('smtp.gmail.com: 587')
+s.starttls()
+
+s.login(msg['From'], password='xhroqavoulveyocf')
+s.sendmail(msg['From'], [msg['To']], msg.as_string().encode('utf-8'))
+print('Email enviado')

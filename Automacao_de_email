@@ -10,7 +10,7 @@ def enviar_email():
 msg = email.message.Message()
 msg ['Subject'] = 'Assunto'
 msg ['From'] = 'romuloamericofurtadosilva@gmail.com'
-msg ['To'] = 'dsb.snf21@uea.edu.br'
+msg ['To'] = ''
 passord = 
 msg.add_header('Contet-Type', 'text/html')
 msg.set_payload('')
